@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 40px auto;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Sections */
+
+.section {
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.section h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Selection Buttons */
+
+button {
+    padding: 10px 16px;
+
+    border: 1px solid #bbb;
+    border-radius: 4px;
+
+    background-color: white;
+    color: #222;
+
+    cursor: pointer;
+
+    margin-right: 6px;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #eeeeee;
+}
+
+.time-btn.active,
+.level-btn.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* Statistics */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.stat-box {
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    text-align: center;
+
+    padding: 12px;
+}
+
+.stat-box p {
+    margin: 0 0 5px;
+
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-box h2 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+/* Text */
+
+.text-box {
+    background-color: white;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    padding: 20px;
+
+    min-height: 220px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+/* Correct and Wrong Characters */
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+
+    background-color: #ffd6d6;
+}
+
+/* Typing Area */
+
+textarea {
+    width: 100%;
+
+    height: 150px;
+
+    resize: vertical;
+
+    padding: 15px;
+
+    font-size: 17px;
+
+    font-family: Arial, sans-serif;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #555;
+}
+
+textarea:disabled {
+    background-color: #eeeeee;
+}
+
+/* Buttons */
+
+.buttons {
+    margin-top: 15px;
+}
+
+#startBtn {
+    background-color: #333;
+    color: white;
+
+    border-color: #333;
+}
+
+#startBtn:hover {
+    background-color: #111;
+}
+
+/* Result */
+
+.result {
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.result h2 {
+    margin-top: 0;
+}
+
+.result p {
+    font-size: 18px;
+}
+
+/* Hide */
+
+.hidden {
+    display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .text-box {
+        font-size: 16px;
+    }
+
+}
