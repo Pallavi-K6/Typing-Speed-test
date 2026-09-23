@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Typing Speed Test</h1>
+        <p class="subtitle">Test your typing speed and accuracy</p>
+
+        <!-- Time Selection -->
+        <div class="section">
+            <h3>Test Duration</h3>
+
+            <button class="time-btn active" onclick="setTime(30, this)">
+                30 Seconds
+            </button>
+
+            <button class="time-btn" onclick="setTime(60, this)">
+                1 Minute
+            </button>
+
+            <button class="time-btn" onclick="setTime(120, this)">
+                2 Minutes
+            </button>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div class="section">
+            <h3>Difficulty</h3>
+
+            <button class="level-btn active" onclick="setLevel('easy', this)">
+                Easy
+            </button>
+
+            <button class="level-btn" onclick="setLevel('medium', this)">
+                Medium
+            </button>
+
+            <button class="level-btn" onclick="setLevel('hard', this)">
+                Hard
+            </button>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-box">
+                <p>Time</p>
+                <h2 id="time">30</h2>
+            </div>
+
+            <div class="stat-box">
+                <p>WPM</p>
+                <h2 id="wpm">0</h2>
+            </div>
+
+            <div class="stat-box">
+                <p>Accuracy</p>
+                <h2 id="accuracy">100%</h2>
+            </div>
+
+            <div class="stat-box">
+                <p>Mistaken Words</p>
+                <h2 id="mistakes">0</h2>
+            </div>
+
+        </div>
+
+        <!-- Text -->
+        <div class="text-box" id="textDisplay"></div>
+
+        <!-- Typing Area -->
+        <textarea
+            id="typingArea"
+            placeholder="Click here and start typing..."
+            disabled
+        ></textarea>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="startBtn" onclick="startTest()">
+                Start Test
+            </button>
+
+            <button onclick="resetTest()">
+                Reset
+            </button>
+
+        </div>
+
+        <!-- Result -->
+        <div id="result" class="result hidden">
+
+            <h2>Test Complete</h2>
+
+            <p>
+                Your WPM:
+                <strong id="finalWpm">0</strong>
+            </p>
+
+            <p>
+                Accuracy:
+                <strong id="finalAccuracy">0%</strong>
+            </p>
+
+            <p>
+                Mistaken Words:
+                <strong id="finalMistakes">0</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
